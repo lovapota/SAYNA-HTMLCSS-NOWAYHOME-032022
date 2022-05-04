@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/css/adversaires.css">
     <link rel="stylesheet" href="./assets/css/index.css">
     <title>Spiderman - Accueil</title>
+    <script src="assets/js/index.js" defer ></script>
 </head>
 <body>
     <header id="header-top">
@@ -18,7 +19,7 @@
                     <a href="bonus.html">
                         <img src="./assets/logo/logo1.png" alt="">
                         <img src="./assets/logo/logo2.png" alt="">
-                        <img src="./assets/logo/logo3.png" alt="">
+                        <img id="marvel" src="./assets/logo/logo3.png" alt="">
                     </a>
                 </div>
                 <div class="menu">
@@ -49,8 +50,8 @@
             <div class="conteneur box">
                 <h1 class="titre">SPIDERMAN</h1>
                 <div class="cta mt-5">
-                    <button type="button" class="btn button1 me-5 ">Voir les héros</button>
-                    <button type="button" class="btn button2">Voir les adversaires</button>
+                    <a href="heros.html"><button type="button" class="btn button1 me-5 ">Voir les héros</button></a>
+                   <a href="adversaires.html"> <button type="button" class="btn button2 "  >Voir les adversaires</button></a>
                 </div>
                 <p class="description">L’araignée sympa du quartier!</p>
                 <audio class="mt-4" src="./assets/audio/audio1.mp3" controls></audio>
@@ -81,7 +82,7 @@
                       <div class="card-body">
                         <p class="card-text">The Amazing Spiderman est sorti en 2012, c’est Andrew Garfield qui incarne le héros et Marc Webb à la réalisation. Un deuxième volet, The Amazing Spider-Man : Le destin d'un héros, est sorti en 2014 et a reçu des critiques très mitigées. Un troisième et quatrième film étaient prévus pour 2016 et 2018. Finalement, Marvel et Sony trouvent un accord pour introduire Spiderman dans l'Univers cinématographique Marvel et abandonne ainsi The Amazing Spider-Man.
                         </p>
-                        <button type="button" class="btn button1">Voir ses adversaires</button>
+                        <button type="button" class="btn button1" >Voir ses adversaires</button>
                       </div>
                     </div>
                     <div class="col-md-4 card-unique">
@@ -95,7 +96,7 @@
                             </ul>
                            Le héro est également présent dans Avengers Infinity War et Avengers End Game, combattant au côté des Avengers.
                             </p>
-                            <button type="button" class="btn button1">Voir ses adversaires</button>
+                            <button type="button" class="btn button1 ">Voir ses adversaires</button>
                       </div>
                     </div>
                   </div>
@@ -111,11 +112,11 @@
                 </div>
                 <div class="spiderman-formulaire text-center ">
                     <form action="" method="">
-                        <input class="form-spiderman" type="text" placeholder="Nom">
-                        <input class="form-spiderman" type="text" placeholder="Prenom" >
-                        <input class="form-spiderman" type="text" placeholder="Taille(cm)">
-                        <input class="form-spiderman" type="text" placeholder="Poids en (kg)" >
-                        <input class="form-spiderman" type="email" name="" id="" placeholder="Adresse email">
+                        <input class="form-spiderman" type="text" value="Nom" style="color: black;">
+                        <input class="form-spiderman" type="text" value="Prenom" style="color: black;" >
+                        <input class="form-spiderman" type="text" value="Taille(cm)" style="color: black;">
+                        <input class="form-spiderman" type="text" value="Poids en (kg)"  style="color: black;">
+                        <input class="form-spiderman" type="email" name="" id="" placeholder="Adresse email" style="color: black;">
                         <input class="form-button" type="submit" value="Envoyer">
                     </form>
                 </div>
@@ -180,10 +181,10 @@
                 </ul>
             </div>
             <div class="media">
-                <img src="./assets/logo/logof.png" alt="">
-                <img src="./assets/logo/logoi.png" alt="">
-                <img src="./assets/logo/logot.png" alt="">
-                <img src="./assets/logo/logoy.png" alt="">
+                <img class="icon" src="./assets/logo/logof.png" alt="">
+                <img class="icon" src="./assets/logo/logoi.png" alt="">
+                <img class="icon" src="./assets/logo/logot.png" alt="">
+                <img class="icon" src="./assets/logo/logoy.png" alt="">
             </div>
             <div class="copyright">
                 <p>&copy;SaynaXMarvel, Inc 2022. We love our users</p>

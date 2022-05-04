@@ -38,6 +38,7 @@
     color: var(--white-ad-color);
     border-radius: 40px;
     padding: 15px 20px;
+    
 }
 
 .card-text{
@@ -120,4 +121,61 @@ input[type=submit]{
 .newsletter-formulaire input[type=submit]{
     background-color: white;
     color: #000000;
+}
+.icon:hover{
+background-color: #4eecec;
+    filter: invert(100%);
+   
+}
+.menu li:hover{
+    text-decoration: underline;
+}
+
+.titre {
+    animation-duration: 5s;
+    animation-name: lebo;
+}
+
+@keyframes lebo {
+    0% {
+        opacity: 0%;
+        transform: translate(-100px);
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+.text-uppercase{
+    animation-name: bole;
+    animation-duration: 5s;
+}
+@keyframes bole {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+#marvel{
+    animation-name:marvel ;
+    animation-duration: 10s;
+}
+@keyframes marvel {
+    0%{
+        opacity: 0%;
+        transform:translate(-150px) ;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+.home2 {
+    transform: translate(466px, 90px);
+    position: fixed;
+}
+.home3{
+    transform: translate(-125px);
+    position: fixed;
 }
