@@ -10,7 +10,6 @@
 #hero{
     background-color: var(--yellow-color);
     background-image: none;
-    
     /* background-size: 550px; */
     background-size: auto;
     background-position: center right;

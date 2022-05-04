@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/adversaires.css">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="assets/js/index.js" defer></script>
     <title>Spiderman - Accueil</title>
-    <script src="assets/js/index.js" defer ></script>
+<!--Lien boostrap icone-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 <body>
     <header id="header-top">
@@ -19,7 +21,7 @@
                     <a href="bonus.html">
                         <img src="./assets/logo/logo1.png" alt="">
                         <img src="./assets/logo/logo2.png" alt="">
-                        <img id="marvel" src="./assets/logo/logo3.png" alt="">
+                        <img src="./assets/logo/logo3.png" alt="">
                     </a>
                 </div>
                 <div class="menu">
@@ -34,7 +36,7 @@
         </nav>
     </header>
     <main>
-        <section id="hero" >
+        <section id="heroh" >
             <div class="conteneur">
                 <nav>
                     <div class="brand-mobile">
@@ -43,24 +45,87 @@
                             <img src="./assets/logo/logo2.png" width="10%" alt="">
                             <img src="./assets/logo/logo3.png" width="60%" alt="">
                         </a>
+                        
                         <div><i class="fa-solid fa-ellipsis fa-2x"></i></div>
+                        
                     </div>
                 </nav>
             </div>
             <div class="conteneur box">
                 <h1 class="titre">SPIDERMAN</h1>
                 <div class="cta mt-5">
-                    <a href="heros.html"><button type="button" class="btn button1 me-5 ">Voir les héros</button></a>
-                   <a href="adversaires.html"> <button type="button" class="btn button2 "  >Voir les adversaires</button></a>
+                    <button type="button" class="btn button1 me-5 ">Voir les héros</button>
+                    <button type="button" class="btn button2">Voir les adversaires</button>
                 </div>
                 <p class="description">L’araignée sympa du quartier!</p>
-                <audio class="mt-4" src="./assets/audio/audio1.mp3" controls></audio>
+
+
+                <!-- Audio hiasana -->
+                <div class="grid1">
+                    <div class="item-grid">
+                        <img src="assets/Assets/heroslider2.png" alt="">
+                    </div>
+                    <div class="item-grid">
+                        <p>
+                            now play
+                        </p>
+                        <b>
+                            what's up
+                        </b>
+                        <p>
+                            black way
+                        </p>
+                    </div>
+                    <div class="item-grid">
+                        <i class="bi bi-balloon-heart-fill"></i>
+                    </div>
+                </div>
+
+                <audio id="audio" class="mt-4" src="./assets/audio/audio1.mp3" ></audio>
+                <audio id="myAudio" >
+                    <source src="./assets/audio/audio1.mp3" type="audio/ogg">
+                  </audio>
+                <progress max="100" value="0" id="progress">
+                    <!-- ------------------------- -->
+                    <!-- <div class="progress">
+                        <span class="start"></span>
+                        <div class="progress-bar">
+                          <div class="now"></div>
+                        </div>
+                        <span class="end"></span>
+                      </div> -->
+                      <div class="hp_slide">
+                        <div class="hp_range"></div>
+                   </div>
+                    <!-- -------------------------- -->
+
+                </progress>
+                <p class="playPause">
+                    
+                    <i class="bi bi-skip-start-fill"></i>
+                    <i id="play" class="bi bi-play" onclick="playAudio()"></i>
+                    <i id="pause" class="bi bi-pause-fill" onclick="pauseAudio()"></i>
+                    <i class="bi bi-skip-end-fill"></i>
+                    
+                </p>
             </div>
+
+            <!-- 1111 -->
+            <div class="marvel">
+                <img src="assets/Assets/home1.png" alt="">
+            </div>
+
+            <!-- 1111 -->
+            <div class="spider">
+                <img src="assets/Assets/home2.png" alt="">
+            </div>
+           
         </section>
         <section id="lesspiderman" class="pb-5">
             <div class="container text-white">
                 <div class="row">
                     <div class="col-md-6">
+                        <!-- eto izao -->
                         <h1 class="text-uppercase">Les Spidermans au cinéma</h1>
                         <p>Spiderman a pu bénéficier de reboot qui ont permis d’adapter ses histoires
                         pour chaque génération !
@@ -82,7 +147,7 @@
                       <div class="card-body">
                         <p class="card-text">The Amazing Spiderman est sorti en 2012, c’est Andrew Garfield qui incarne le héros et Marc Webb à la réalisation. Un deuxième volet, The Amazing Spider-Man : Le destin d'un héros, est sorti en 2014 et a reçu des critiques très mitigées. Un troisième et quatrième film étaient prévus pour 2016 et 2018. Finalement, Marvel et Sony trouvent un accord pour introduire Spiderman dans l'Univers cinématographique Marvel et abandonne ainsi The Amazing Spider-Man.
                         </p>
-                        <button type="button" class="btn button1" >Voir ses adversaires</button>
+                        <button type="button" class="btn button1">Voir ses adversaires</button>
                       </div>
                     </div>
                     <div class="col-md-4 card-unique">
@@ -96,7 +161,7 @@
                             </ul>
                            Le héro est également présent dans Avengers Infinity War et Avengers End Game, combattant au côté des Avengers.
                             </p>
-                            <button type="button" class="btn button1 ">Voir ses adversaires</button>
+                            <button type="button" class="btn button1">Voir ses adversaires</button>
                       </div>
                     </div>
                   </div>
@@ -104,6 +169,11 @@
         </section>
     </main>
     <section id="spiderman">
+         <!-- 22222 -->
+         <div class="spiderNB">
+         
+        </div>
+
         <div class="container text-center">
             <div class="spider-content float-end">
                 <div class="spiderman-head">
@@ -112,16 +182,17 @@
                 </div>
                 <div class="spiderman-formulaire text-center ">
                     <form action="" method="">
-                        <input class="form-spiderman" type="text" value="Nom" style="color: black;">
-                        <input class="form-spiderman" type="text" value="Prenom" style="color: black;" >
-                        <input class="form-spiderman" type="text" value="Taille(cm)" style="color: black;">
-                        <input class="form-spiderman" type="text" value="Poids en (kg)"  style="color: black;">
-                        <input class="form-spiderman" type="email" name="" id="" placeholder="Adresse email" style="color: black;">
-                        <input class="form-button" type="submit" value="Envoyer">
+                        <input class="form-spiderman" type="text" placeholder="Nom">
+                        <input class="form-spiderman" type="text" placeholder="Prenom" >
+                        <input class="form-spiderman" type="text" placeholder="Taille(cm)">
+                        <input class="form-spiderman" type="text" placeholder="Poids en (kg)" >
+                        <input class="form-spiderman" type="email" name="" id="" placeholder="Adresse email">
+                        <input class="form-button" id="search" type="submit" value="Envoyer">
                     </form>
                 </div>
             </div>
         </div>
+       
     </section>
     <section id="newsletter">
         <div class="container">
@@ -181,10 +252,10 @@
                 </ul>
             </div>
             <div class="media">
-                <img class="icon" src="./assets/logo/logof.png" alt="">
-                <img class="icon" src="./assets/logo/logoi.png" alt="">
-                <img class="icon" src="./assets/logo/logot.png" alt="">
-                <img class="icon" src="./assets/logo/logoy.png" alt="">
+                <img src="./assets/logo/logof.png" alt="">
+                <img src="./assets/logo/logoi.png" alt="">
+                <img src="./assets/logo/logot.png" alt="">
+                <img src="./assets/logo/logoy.png" alt="">
             </div>
             <div class="copyright">
                 <p>&copy;SaynaXMarvel, Inc 2022. We love our users</p>

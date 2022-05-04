@@ -1,66 +1,119 @@
-const btn1 = document.getElementsByClassName('button1')
-const btn2 = document.getElementsByClassName('button2')
-const arrayBtn1 = Array.from(btn1)
-const arrayBtn2 = Array.from(btn2)
 
 
 
-arrayBtn1.forEach(i => {
-    i.addEventListener('mouseenter', () => {
-        i.style.backgroundColor = 'transparent'
-        i.style.color = 'white' 
-        i.style.border = '0.2em solid white'
-        i.style.boxShadow = '0 5px 15px 1px white'
-})
-i.addEventListener('mouseleave', () => {
-    i.style.backgroundColor = ''
-    i.style.color = '' 
-    i.style.border = ''
-    i.style.boxShadow = ''
-})
-});
 
 
-arrayBtn2.forEach(i => {
-    i.addEventListener('mouseenter', () => {
-        i.style.backgroundColor = 'white'
-        i.style.color = '#b11313' 
-        i.style.border = ''
-        i.style.boxShadow = '0 5px 15px 1px white'
-})
-i.addEventListener('mouseleave', () => {
-    i.style.backgroundColor = ''
-    i.style.color = '' 
-    i.style.border = ''
-    i.style.boxShadow = ''
-})
-});
 
-//Spiderman
-const cont = document.getElementsByClassName('conteneur');
+//Animation Spiderman noir et rouge
+const spider = document.querySelector('.spider');
+const spiderNb = document.querySelector('.spiderNB')
+let my = [0,]
+
 window.addEventListener('scroll', () => {
-    const scroll = window.scrollY;
-    if (scroll < 1600){
-        cont[1].innerHTML = `<div class="home2"> <img src="assets/assets/home2.png" alt="">
-</div>`;
-cont[2].innerHTML = ``;
-    }
-    else if ( scroll < 1800){
-        cont[2].innerHTML = `<div class="home3">
-<img src="assets/img/img5.png" alt="">
-</div>`;
-cont[1].innerHTML = ``;
-    }
+        my.push(window.scrollY)
+        if (my[0] < 2000) {
+                spider.innerHTML = `<img src="assets/Assets/home2.png" alt="">`;
+                spider.style.opacity = '70%';
+                spiderNb.innerHTML = ``;
+        } else {
+                spider.innerHTML = ``;
+                spiderNb.innerHTML = `<img src="assets/img/img5.png" alt="">`;
+                spiderNb.style.opacity = '70%';
+        }
+        my.shift()
+});
+
+
+
+//Input 
+const input = document.getElementsByClassName('form-spiderman');
+const btn1 = document.getElementById('search');
+let place = []
+btn1.addEventListener('click', () => {
+        for (let i = 0; i < input.length; i++) {
+                if (input[i].value != '') {
+                        place.push(0)
+                }
+        }
+        if (place.length == 5) {
+                alert('ATAO BOX MILAY B')
+        }
 })
 
 
-const input = document.getElementsByClassName('form-spiderman')
-const arrayInput = Array.from(input)
-const button3 = document.getElementsByClassName('form-button')
-button3[0].addEventListener('click', () => {
-        if (arrayInput[4].value !== '') {
-            alert('Devener Spiderman')
-    }
-})
+//Audio
+const audio = document.getElementById('audio');
+
+const duration = audio.duration;
+
+const bar = document.getElementById('progress')
+
+bar.setAttribute('max',audio.duration);
 
 
+//Javascript
+var maxprogress =audio.duration; // total à atteindre
+var actualprogress = 0;  // valeur courante
+var itv = 0;  // id pour setinterval
+function prog()
+{
+        audio.play();
+        
+  if(actualprogress >= maxprogress) 
+  {
+    clearInterval(itv);  	
+    return;
+  }
+  bar.setAttribute('value',actualprogress)	
+  actualprogress += 1;	
+  if(actualprogress == maxprogress) {
+        clearInterval(itv)
+  };   
+}
+function clearInterval(itv) {
+        itv
+}
+
+let x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+// ========================================
+// const myAudio = document.getElementById('music')
+//   const start = document.querySelector('.start')
+//   const end = document.querySelector('.end')
+//   const progressBar = document.querySelector('.progress-bar')
+//   const now = document.querySelector('.now')
+
+//   function conversion (value) {
+//     let minute = Math.floor(value / 60)
+//     minute = minute.toString().length === 1 ? ('0' + minute) : minute
+//     let second = Math.round(value % 60)
+//     second = second.toString().length === 1 ? ('0' + second) : second
+//     return `${minute}:${second}`
+//   }
+
+//   myAudio.onloadedmetadata = function () {
+//     end.innerHTML = conversion(myAudio.duration)
+//     start.innerHTML = conversion(myAudio.currentTime)
+//   }
+
+//   progressBar.addEventListener('click', function (event) {
+//     let coordStart = this.getBoundingClientRect().left
+//     let coordEnd = event.pageX
+//     let p = (coordEnd - coordStart) / this.offsetWidth
+//     now.style.width = p.toFixed(3) * 100 + '%'
+
+//     myAudio.currentTime = p * myAudio.duration
+//     myAudio.play()
+//   })
+
+//   setInterval(() => {
+//     start.innerHTML = conversion(myAudio.currentTime)
+//     now.style.width = myAudio.currentTime / myAudio.duration.toFixed(3) * 100 + '%'
+//   }, 1000)
