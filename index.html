@@ -52,32 +52,26 @@
                 </nav>
             </div>
             <div class="conteneur box">
-                <h1 class="titre">SPIDERMAN</h1>
+            <!--Sans animation-->
+                <div class="text">
+                    <h1 class="titre">SPIDERMAN</h1>
                 <div class="cta mt-5">
                     <button type="button" class="btn button1 me-5 ">Voir les héros</button>
                     <button type="button" class="btn button2">Voir les adversaires</button>
                 </div>
                 <p class="description">L’araignée sympa du quartier!</p>
-
-
                 <!-- Audio hiasana -->
                 <div class="grid1">
                     <div class="item-grid">
-                        <img src="assets/Assets/heroslider2.png" alt="">
+                        <img src="assets/Assets/heroslider3.png" alt="">
                     </div>
                     <div class="item-grid">
-                        <p>
-                            now play
-                        </p>
-                        <b>
-                            what's up
-                        </b>
-                        <p>
-                            black way
-                        </p>
+                        <p>Now playing</p>
+                        <h4>What's up Danger</h4>
+                        <p>Blackway & Black Caviar</p> 
                     </div>
                     <div class="item-grid">
-                        <i class="bi bi-balloon-heart-fill"></i>
+                        <i class="bi bi-balloon-heart-fill" id="hearth"></i>
                     </div>
                 </div>
 
@@ -101,24 +95,26 @@
 
                 </progress>
                 <p class="playPause">
-                    
-                    <i class="bi bi-skip-start-fill"></i>
-                    <i id="play" class="bi bi-play" onclick="playAudio()"></i>
-                    <i id="pause" class="bi bi-pause-fill" onclick="pauseAudio()"></i>
-                    <i class="bi bi-skip-end-fill"></i>
+                    <i class="bi bi-skip-start-fill menuAu"></i>
+                    <i id="play" class="bi bi-play menuAu" onclick="playAudio()"></i>
+                    <i id="pause" class="bi bi-pause-fill menuAu" onclick="pauseAudio()" style="display:none"></i>
+                    <i class="bi bi-skip-end-fill menuAu"></i>
                     
                 </p>
+                </div>
+            <!--L'animation  Marvel-->
+                <div class="marvel">
+                    <img src="assets/Assets/home1.png" alt="">
+                </div>
+            <!--L'animation Spiderman en couleur-->
+                <div class="spider">
+                    <img src="assets/Assets/home2.png" alt="">
+                </div>
             </div>
+                
 
-            <!-- 1111 -->
-            <div class="marvel">
-                <img src="assets/Assets/home1.png" alt="">
-            </div>
-
-            <!-- 1111 -->
-            <div class="spider">
-                <img src="assets/Assets/home2.png" alt="">
-            </div>
+           
+            
            
         </section>
         <section id="lesspiderman" class="pb-5">

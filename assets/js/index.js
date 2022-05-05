@@ -1,9 +1,4 @@
 
-
-
-
-
-
 //Animation Spiderman noir et rouge
 const spider = document.querySelector('.spider');
 const spiderNb = document.querySelector('.spiderNB')
@@ -43,24 +38,19 @@ btn1.addEventListener('click', () => {
 
 //Audio
 const audio = document.getElementById('audio');
-
 const duration = audio.duration;
-
 const bar = document.getElementById('progress')
-
 bar.setAttribute('max',audio.duration);
-
-
-//Javascript
-var maxprogress =audio.duration; // total à atteindre
+const play = document.getElementById('play');
+const pause = document.getElementById('pause');
+var maxprogress = audio.duration; // total à atteindre
 var actualprogress = 0;  // valeur courante
 var itv = 0;  // id pour setinterval
-function prog()
-{
+function playAudio(){
         audio.play();
-        
-  if(actualprogress >= maxprogress) 
-  {
+        play.style.display = 'none';
+        pause.style.display = 'block';
+  if(actualprogress >= maxprogress){
     clearInterval(itv);  	
     return;
   }
@@ -70,19 +60,22 @@ function prog()
         clearInterval(itv)
   };   
 }
-function clearInterval(itv) {
-        itv
+function pauseAudio() {
+        clearInterval(itv);
+        play.style.display = 'block';
+        pause.style.display = 'none';
+        audio.pause();
 }
 
-let x = document.getElementById("myAudio"); 
+// let x = document.getElementById("myAudio"); 
 
-function playAudio() { 
-  x.play(); 
-} 
+// function playAudio() { 
+//   x.play(); 
+// } 
 
-function pauseAudio() { 
-  x.pause(); 
-} 
+// function pauseAudio() { 
+//   x.pause(); 
+// } 
 // ========================================
 // const myAudio = document.getElementById('music')
 //   const start = document.querySelector('.start')
