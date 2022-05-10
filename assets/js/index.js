@@ -38,75 +38,44 @@ btn1.addEventListener('click', () => {
 
 //Audio
 const audio = document.getElementById('audio');
-const duration = audio.duration;
-const bar = document.getElementById('progress')
-bar.setAttribute('max',audio.duration);
+const bar = document.getElementById('progress');
 const play = document.getElementById('play');
 const pause = document.getElementById('pause');
-var maxprogress = audio.duration; // total à atteindre
-var actualprogress = 0;  // valeur courante
-var itv = 0;  // id pour setinterval
-function playAudio(){
+let actualprogress = 0;  // valeur courante
+function AddProgress(){
+        actualprogress ++;
+        bar.setAttribute('value', `${actualprogress}`);      
+}
+const itv = setInterval('AddProgress()', 1000);;
+play.addEventListener('click', () => {
+        bar.setAttribute('max',`${audio.duration}`);
+        console.log(`${audio.duration}`);
         audio.play();
         play.style.display = 'none';
         pause.style.display = 'block';
-  if(actualprogress >= maxprogress){
-    clearInterval(itv);  	
-    return;
-  }
-  bar.setAttribute('value',actualprogress)	
-  actualprogress += 1;	
-  if(actualprogress == maxprogress) {
-        clearInterval(itv)
-  };   
-}
-function pauseAudio() {
+});
+pause.addEventListener('click', () =>{
         clearInterval(itv);
         play.style.display = 'block';
         pause.style.display = 'none';
-        audio.pause();
-}
+        audio.pause(); 
+        console.log(actualprogress);
+        bar.setAttribute('value', `${actualprogress}`); 
+        return actualprogress;
+         
+})
 
-// let x = document.getElementById("myAudio"); 
-
-// function playAudio() { 
-//   x.play(); 
-// } 
-
-// function pauseAudio() { 
-//   x.pause(); 
-// } 
-// ========================================
-// const myAudio = document.getElementById('music')
-//   const start = document.querySelector('.start')
-//   const end = document.querySelector('.end')
-//   const progressBar = document.querySelector('.progress-bar')
-//   const now = document.querySelector('.now')
-
-//   function conversion (value) {
-//     let minute = Math.floor(value / 60)
-//     minute = minute.toString().length === 1 ? ('0' + minute) : minute
-//     let second = Math.round(value % 60)
-//     second = second.toString().length === 1 ? ('0' + second) : second
-//     return `${minute}:${second}`
-//   }
-
-//   myAudio.onloadedmetadata = function () {
-//     end.innerHTML = conversion(myAudio.duration)
-//     start.innerHTML = conversion(myAudio.currentTime)
-//   }
-
-//   progressBar.addEventListener('click', function (event) {
-//     let coordStart = this.getBoundingClientRect().left
-//     let coordEnd = event.pageX
-//     let p = (coordEnd - coordStart) / this.offsetWidth
-//     now.style.width = p.toFixed(3) * 100 + '%'
-
-//     myAudio.currentTime = p * myAudio.duration
-//     myAudio.play()
-//   })
-
-//   setInterval(() => {
-//     start.innerHTML = conversion(myAudio.currentTime)
-//     now.style.width = myAudio.currentTime / myAudio.duration.toFixed(3) * 100 + '%'
-//   }, 1000)
+// let a = 0;
+// function lova(){
+//         a ++;
+//         console.log(a);
+//         if(a === 10){
+//                 clearInterval(b);
+//                 console.log(a);
+//                 return a
+//         }
+//         function test() {
+                
+//         }
+// };
+// const b = setInterval('lova()', 1000);

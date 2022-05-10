@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--===============Petite icone sur le titre du page================-->    
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo/FlavIcon.png">
+<!--==================Lien bootstrap============================--> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--============Lien vers mes CSS==================-->
     <link rel="stylesheet" href="./assets/css/adversaires.css">
     <link rel="stylesheet" href="./assets/css/index.css">
+<!--=============================Lien du Javascript==========================-->
     <script src="assets/js/index.js" defer></script>
+<!--======================Titre du site=============================-->
     <title>Spiderman - Accueil</title>
 <!--Lien boostrap icone-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 <body>
+    <!--=====En tete du page==================-->
     <header id="header-top">
         <nav>
             <div class="conteneur navigbar">
@@ -63,7 +70,7 @@
                 <!-- Audio hiasana -->
                 <div class="grid1">
                     <div class="item-grid">
-                        <img src="assets/Assets/heroslider3.png" alt="">
+                        <img src="assets/logo/KGh6zA94ktjyPi0-Spider-Man-Mask-Logo-PNG-Photos.webp" alt="">
                     </div>
                     <div class="item-grid">
                         <p>Now playing</p>
@@ -74,32 +81,17 @@
                         <i class="bi bi-balloon-heart-fill" id="hearth"></i>
                     </div>
                 </div>
-
-                <audio id="audio" class="mt-4" src="./assets/audio/audio1.mp3" ></audio>
-                <audio id="myAudio" >
-                    <source src="./assets/audio/audio1.mp3" type="audio/ogg">
-                  </audio>
+                <audio id="audio" class="mt-4"  >
+                    <source src="assets/audio/audio1.mp3" type="audio/mpeg">
+                </audio>
                 <progress max="100" value="0" id="progress">
-                    <!-- ------------------------- -->
-                    <!-- <div class="progress">
-                        <span class="start"></span>
-                        <div class="progress-bar">
-                          <div class="now"></div>
-                        </div>
-                        <span class="end"></span>
-                      </div> -->
-                      <div class="hp_slide">
-                        <div class="hp_range"></div>
-                   </div>
                     <!-- -------------------------- -->
-
                 </progress>
                 <p class="playPause">
                     <i class="bi bi-skip-start-fill menuAu"></i>
-                    <i id="play" class="bi bi-play menuAu" onclick="playAudio()"></i>
-                    <i id="pause" class="bi bi-pause-fill menuAu" onclick="pauseAudio()" style="display:none"></i>
+                    <i id="play" class="bi bi-play menuAu"></i>
+                    <i id="pause" class="bi bi-pause-fill menuAu"  style="display:none"></i>
                     <i class="bi bi-skip-end-fill menuAu"></i>
-                    
                 </p>
                 </div>
             <!--L'animation  Marvel-->
@@ -111,11 +103,6 @@
                     <img src="assets/Assets/home2.png" alt="">
                 </div>
             </div>
-                
-
-           
-            
-           
         </section>
         <section id="lesspiderman" class="pb-5">
             <div class="container text-white">

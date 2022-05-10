@@ -79,6 +79,7 @@
     }
 }
 .spider img{
+    z-index: -1;
     right: 0;
     top: 10%;
     position: fixed;
